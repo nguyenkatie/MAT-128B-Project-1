@@ -1,4 +1,4 @@
-c = 0;
+c = -0.123 - 0.745i;
 
 hold on;
 for j = 1:341
@@ -10,7 +10,7 @@ for j = 1:341
         kount = 0;
         
    
-        while kount < 100
+        while kount < 200
             kount = kount + 1;
             r = sqrt((real(zk) - real(c))^2 + (imag(zk) - imag(c))^2);
             if (real(zk) - real(c)) > 0
@@ -24,7 +24,7 @@ for j = 1:341
             end
             zk = random * sqrt(r)*(cos(theta/2) + 1i*sin(theta/2));
         end
-        plot(real(zk), imag(zk), 'o');
+        plot(real(zk), imag(zk),'.');
     end
   
 end
